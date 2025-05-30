@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+html, body 
+{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+main 
+{
+    flex: 1;
+}
+
+body
+{    
+    background-image: url('../Recursos/Background.png');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+nav
+{
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 20;
+}
+
+#marca
+{
+    margin: 10px;
+}
+#botones a
+{
+    font-family: 'Questrial';
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+#botones a:hover 
+{
+    transform: translateY(-3px);
+    color: #c63303;
+}
+
+#botones
+{
+    display: flex;
+    align-items: center;
+}
+
+/* ZONA MAIN*/
+#container_form
+{
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 30px;
+    padding: 30px 0 10px 40px;
+}
+#container_form label, 
+#container_form button 
+{
+  font-family: 'Questrial';
+  font-size: 1.1rem;
+}
+#container_form input,
+#container_form textarea
+{
+  font-family: 'Questrial';
+  font-size: 1rem;
+}
+.btn-wide 
+{
+    width: 50%;
+}
+
+#boton_estilo  
+{
+    background-color: #1c0786;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#boton_estilo:after 
+{
+    content: "";
+    background-color: #c63303;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+#boton_estilo:hover:after 
+{
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#boton_estilo:active 
+{
+    transform: scale(0.95);
+}
+
+/* ZONA FOOTER */
+#container_footer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 45px;
+}
+#linea_footer
+{
+    width: 3px;
+    height: 200px;
+    background-color: white;
+    border-radius: 30px;
+}
+#container_redes
+{
+    display: inline-block;
+    text-align: center;
+    font-family: 'Questrial';
+}
+#container_redes h3
+{
+    margin-bottom: 40px;
+    font-size: 2.3rem !important;
+    font-weight: 610;
+}
+
+#card 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.socialContainer 
+{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 1s;
+}
+/* Whatsapp*/
+.containerOne:hover
+{
+    background-color: #25D366;
+    transition-duration: 0.3s;
+}
+/*Facebook*/
+.containerTwo:hover
+{
+    background-color: #1877F2;
+    transition-duration: 0.3s;
+}
+/*Instagram*/
+.containerThree:hover 
+{
+    background-color: #cc2366; 
+    transition-duration: 0.3s;
+}
+/*Email*/
+.containerFour:hover 
+{
+    background-color:#EA4335;
+    transition-duration: 0.3s;
+}
+
+.socialContainer:active 
+{
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+.socialSvg 
+{
+    width: 45px;
+}
+
+.socialSvg path 
+{
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg 
+{
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top 
+{
+  0% 
+    {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+  100%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
