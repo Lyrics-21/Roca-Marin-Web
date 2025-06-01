@@ -13,30 +13,6 @@
 </head>
 <body>
     <header>
-        <!--
-        <div class="divNav">
-            <div id="menu">
-                <button id="button-menu">
-                    <img src="Recursos\Iconos Blancos\Menu blanco 2.png" alt="Menu">
-                    <span>Menu</span>
-                </button>
-                <div id="menu-desplegable">
-                    <div>
-                        <a href="">Buscar</a>
-                    </div>
-                    <div>
-                        <a href="">Favoritos</a>
-                    </div>
-                    <div>
-                        <a href="#nuestrasRedes">Contacto</a>
-                    </div>
-                    <div>
-                        <a href="htmls/qs.html">Quienes Somos</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
         <nav>
             <div id="marca">
                 <a href="#encabezado">
@@ -44,7 +20,7 @@
                 </a>
             </div>
             <div id="botones">
-                <a href="#container_qs">QUIENES SOMOS</a>
+                <a href="#quienes_somos">QUIENES SOMOS</a>
                 <a href="#nuestros_servicios">SERVICIOS</a>
                 <a href="Contacto/Contacto.html#marca">CONTACTO</a>
             </div>
@@ -58,14 +34,16 @@
                 </div>
                 <div id="carrusel">
                     <div id="felchas_carrusel">
-                        <img src="Recursos/Iconos/Arrow_left.svg" alt="flecha_izquierda">
-                        <img src="Recursos/Iconos/Arrow_right.svg" alt="flecha_derecha">
+                        <img src="Recursos/Iconos/Arrow_left.svg" alt="flecha_izquierda" id="prev">
+                        <img src="Recursos/Iconos/Arrow_right.svg" alt="flecha_derecha" id="next">
                     </div>
-                    <img src="Recursos/Carrusel/Eolica.jpg" alt="Principal" class="imagenes_carrusel">
-                    <img src="Recursos/Carrusel/lightbulbs.jpg" alt="Segunda" class="imagenes_carrusel">
-                    <img src="Recursos/Carrusel" alt="Tercera" class="imagenes_carrusel">
-                    <img src="Recursos/Carrusel" alt="Cuarta" class="imagenes_carrusel">
-                    <img src="Recursos/Carrusel" alt="Quinta" class="imagenes_carrusel">
+                    <img src="Recursos/Carrusel/Roca Marin Tarjeta.png" alt="Principal" class="imagenes_carrusel active">
+                    <img src="Recursos/Carrusel/Eolica.jpg" alt="Segunda" class="imagenes_carrusel">
+                    <img src="Recursos/Carrusel/lightbulbs.jpg" alt="Tercera" class="imagenes_carrusel">
+                    <img src="Recursos/Carrusel/Termicas.jpg" alt="Cuarta" class="imagenes_carrusel">
+                    <img src="Recursos/Carrusel/Lamparas.jpg" alt="Quinta" class="imagenes_carrusel">
+                    <img src="Recursos/Carrusel/Interior Cafe.jpg" alt="Sexta" class="imagenes_carrusel">
+                    <img src="Recursos/Carrusel/Solar.jpg" alt="Septima" class="imagenes_carrusel">
                     <div id="texto_encabezado">
                         <h3 class="texto_info">MANO DE OBRA CALIFICADA</h3>
                     </div>
@@ -91,40 +69,43 @@
         </section>
     </header>
     <main>
-        <article>
-            <div id="container_qs" class="containers_base">
+        <article id="quienes_somos">
+            <div class="container_titulo">
                 <h2 class="titulos_main">QUIENES SOMOS</h2>
                 <div class="lineas"></div>
-                <p>En Roca Marin nos especializamos en ofrecer servicios de mano de obra eléctrica, respaldados<br>
-                    por un equipo de profesionales en constante capacitación.<br>
-                    Nos destacamos por cumplir con los más altos estándares de calidad, asegurando precisión,<br>
-                    eficiencia y confianza en cada proyecto.<br>
-                    Además, nos caracterizamos por nuestra puntualidad, responsabilidad, seriedad<br>
-                    y trato profesional, asegurando siempre un servicio de excelencia.<br>
+            </div>
+            <div id="contenido_qs">
+                <p>En Roca Marin nos especializamos en ofrecer servicios de mano de obra eléctrica,<br>
+                    respaldados por un equipo de profesionales en constante capacitación.<br>
+                    Nos destacamos por cumplir con los más altos estándares de calidad,<br>
+                    asegurando precisión, eficiencia y confianza en cada proyecto.<br>
+                    Además, nos caracterizamos por nuestra puntualidad, responsabilidad,<br>
+                    seriedad y trato profesional, asegurando siempre un servicio de excelencia.<br>
                     Asimismo somos una empresa comprometida con el cuidado del entorno,<br>
                     adoptando practicas responsables con el medio ambiente.
                 </p>
-            </div>
-            <div id="imagenes_qs">
-                <img src="Recursos/landscape.jpg" alt="">
-                <img src="Recursos/lightbulbs.jpg" alt="">
+                <img src="Recursos\Rayo.png" alt="Rayo" id="Rayo">
+                <div id="imagenes_qs">
+                    <img src="Recursos/landscape.jpg" alt="">
+                    <img src="Recursos/lightbulbs.jpg" alt="">
+                </div>
             </div>
         </article>
 
         <article id="nuestros_servicios">
-            <div class="container_main" class="containers_base">
+            <div class="container_titulo">
                 <h2 class="titulos_main">NUESTROS SERVICIOS</h2>
                 <div class="lineas"></div>
             </div>
             <div id="categorias">
                 <div class="container_categorias">
-                    <div class="imagen_wrapper">
+                    <div class="imagen_wrapper" id="container_primera_imagen">
                         <img src="Recursos/Domiciliar.jpg" alt="domiciliares" id="primera_imagen">
-                        <div class="lamina_logo">
+                        <div class="lamina_logo" id="primera_lamina">
                             <img src="Recursos\Logo RocaMarin.png" alt="logo">
                         </div>
+                        <h3 class="texto_info">DOMICILIARIOS</h3>
                     </div>
-                    <h3 class="texto_info">DOMICILIARIOS</h3>
                     <div class="container_expandir" id="primer_expandir">
                         <img src="Recursos\Iconos\cruz_orange.svg" alt="" class="cruz">
                         <div class="container_listas">
@@ -140,13 +121,13 @@
                 </div>
 
                 <div class="container_categorias">
-                    <div class="imagen_wrapper">
+                    <div class="imagen_wrapper" id="container_segunda_imagen">
                         <img src="Recursos/Comercial.jpg" alt="comerciales" id="segunda_imagen">
-                        <div class="lamina_logo">
+                        <div class="lamina_logo" id="segunda_lamina">
                             <img src="Recursos\Logo RocaMarin.png" alt="logo">
                         </div>
+                        <h3 class="texto_info">COMERCIALES</h3>
                     </div>
-                    <h3 class="texto_info">COMERCIALES</h3>
                     <div class="container_expandir" id="segundo_expandir">
                         <img src="Recursos\Iconos\cruz_orange.svg" alt="" class="cruz">
                         <div class="container_listas">
@@ -162,17 +143,16 @@
                 </div>
 
                 <div class="container_categorias">
-                    <div class="imagen_wrapper">
+                    <div class="imagen_wrapper" id="container_tercera_imagen">
                         <img src="Recursos/Industrial.jpg" alt="industriales" id="tercera_imagen">
-                        <div class="lamina_logo">
+                        <div class="lamina_logo" id="tercera_lamina">
                             <img src="Recursos\Logo RocaMarin.png" alt="logo">
-                            <li></li>
                         </div>
+                        <h3 class="texto_info">INDUSTRIALES</h3>
                     </div>
-                    <h3 class="texto_info">INDUSTRIALES</h3>
                     <div id="container_expandir_derecha">
-                        <img src="Recursos\Iconos\cruz_orange.svg" alt="" class="cruz">
-                        <div class="container_listas">
+                        <img src="Recursos\Iconos\cruz_orange.svg" alt="" class="cruz" id="cruz_derecha">
+                        <div class="container_listas" id="container_lista_derecha">
                             <ul class="texto_listas">
                                 <li>Instalaciones eléctricas de gran potencia.</li>
                                 <li>Para entornos industriales exigentes.</li>
@@ -187,12 +167,21 @@
         </article>
 
         <article>
-            <div class="container_main" class="containers_base">
+            <div class="container_titulo">
                 <h3 class="titulos_main">NUESTROS CLIENTES</h3>
                 <div class="lineas"></div>
             </div>
-            <div></div>
-            <div></div>
+            <div id="container_client_prov">
+                <div id="container_clientes">
+                    <img src="Recursos\CLIE_PROV\AD.png" alt="AD">
+                    <img src="Recursos\CLIE_PROV\MK.png" alt="MK">
+                </div>
+                <div id="container_proovedores">
+                    <img src="Recursos\CLIE_PROV\Casa Blanco.png" alt="Casa Blanco">
+                    <img src="Recursos\CLIE_PROV\Ciardi.png" alt="Ciardi">
+                    <img src="Recursos\CLIE_PROV\Electro Puerto.png" alt="Electro Puerto">
+                </div>
+            </div>
         </article>
 
     </main>

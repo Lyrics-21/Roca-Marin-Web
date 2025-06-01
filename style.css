@@ -31,7 +31,7 @@ nav
     position: fixed;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.85);
-    z-index: 20;
+    z-index: 50;
 }
 
 #marca
@@ -50,9 +50,15 @@ nav
 }
 #botones a:hover 
 {
-    transform: translateY(-3px);
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
     color: #c63303;
 }
+#botones a:active 
+{
+    transform: scale(0.95);
+}
+
 
 #botones
 {
@@ -78,6 +84,7 @@ nav
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 5;
 }
 
 #carrusel
@@ -94,7 +101,17 @@ nav
     position: absolute;
     width: 900px;
     height: 490px;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.9s ease-in-out;
 }
+.imagenes_carrusel.active 
+{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
 #felchas_carrusel
 {
     position: absolute;
@@ -168,40 +185,7 @@ nav
 /* ZONA MAIN */
 
 /*QUIENES SOMOS*/
-.containers_base
-{
-    width: 60%;
-    background-color: rgba(0, 0, 0, 0.85);
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    padding-left: 80px;
-    padding-top: 25px;
-    margin-top: 190px;
-}
-
-#container_qs 
-{
-    height: 37vh;
-    scroll-margin-top: 90px;
-}
-#nuestros_servicios
-{
-    scroll-margin-top: 90px;
-}
-
-.container_main 
-{
-    height: 11vh;
-}
-#container_qs p
-{
-    margin-top: 15px;
-    font-size: 20px;
-    line-height: 1.5;
-    font-family: 'Questrial';    
-}
-
-.container_main
+.container_titulo
 {
     width: 60%;
     height: 10vh;
@@ -211,6 +195,44 @@ nav
     padding-left: 80px;
     padding-top: 20px;
     margin-top: 190px;
+}
+#quienes_somos
+{
+    scroll-margin-top: 90px;
+}
+#nuestros_servicios
+{
+    scroll-margin-top: 90px;
+}
+
+#contenido_qs
+{
+    display: flex;
+    align-items: center;
+    width: 83%;
+    margin: auto;
+    border-radius: 30px;
+    background-color: #6f6f6f;
+    padding: 50px;
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+#contenido_qs p
+{
+    font-size: 20px;
+    text-align: left;
+    line-height: 1.7;
+    font-family: 'Questrial';  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    z-index: 10;
+}
+#Rayo
+{
+    position: absolute;
+    width: 700px;
+    height: auto;
+    opacity: 0.2;
 }
 
 .titulos_main
@@ -228,21 +250,6 @@ nav
     height: 4px;
     background-color: white;
     border-radius: 30px;
-}
-
-#imagenes_qs
-{
-    display: flex;
-    justify-content: space-evenly;
-    right: 0;
-    width: 70%;
-    background-color: #6f6f6f; 
-}
-#imagenes_qs img
-{
-    display: inline-block;
-    width: 460px;
-    height: 280px;
 }
 
 /*CATEGORIAS*/
@@ -287,7 +294,6 @@ nav
     width: 100%;
     padding: 10px 0;
     margin-left: 0;
-    z-index: 10;
 }
 #primera_imagen
 {
@@ -331,26 +337,44 @@ nav
 }
 
 /*Categoria Desplegable*/
+@keyframes expandirAncho 
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 85vh;
+    opacity: 1;
+  }
+}
+
 .container_expandir
 {
     position: absolute;
-    width: 80vh;
-    height: 360px;
+    width: 85vh;
+    height: 100%;
     border-radius: 30px;
     background-color: #6f6f6f; 
     z-index: 20;
+    animation: expandirAncho 0.4s ease forwards;
+    overflow: hidden;
 }
 
 #container_expandir_derecha
 {
     position: absolute;
-    left: -45vh;
-    width: 80vh;
-    height: 360px;
+    right: 0;
+    width: 85vh;
+    height: 100%;
     border-radius: 30px;
-    background-color: #6f6f6f; 
+    background-color: #6f6f6f;
     z-index: 20;
     display: none;
+    animation: expandirAncho 0.4s ease forwards;
+    overflow: hidden;
 }
 
 .texto_listas
@@ -366,6 +390,12 @@ nav
     display: flex;
     justify-content:right;
     align-items: center;
+    padding-right: 30px;
+}
+#container_lista_derecha
+{
+    justify-content:left !important;
+    padding-left: 50px !important;
 }
 
 .cruz
@@ -378,13 +408,50 @@ nav
     margin: 20px 25px 0 0;
     cursor: pointer;
 }
+#cruz_derecha
+{
+    left: 0 !important;
+    margin: 20px 0 0 25px !important;
+}
 
 #primer_expandir, #segundo_expandir
 {
     display: none;
 }
 
-
+/*ZONA CLIENTES Y PROOVEDORES*/
+#container_client_prov
+{
+    display: grid;
+    justify-content: center;
+    padding: 100px;
+}
+#container_clientes
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    background-color: #6f6f6f;
+}
+#container_clientes img
+{
+    width: 250px;
+    height: 250px;
+}
+#container_proovedores
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    background-color: #6f6f6f;
+}
+#container_proovedores img
+{
+    width: 450px;
+    height: 200px;
+}
 
 /* ZONA FOOTER */
 #container_footer
