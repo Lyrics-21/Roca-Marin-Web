@@ -1,3 +1,18 @@
+const menu = document.getElementById("menu_desplegable");
+const burgerCheckbox = document.getElementById("burger");
+
+burgerCheckbox.addEventListener("change", () => 
+{
+    if (burgerCheckbox.checked) 
+    {
+        menu.classList.add("activo");
+    } 
+    else 
+    {
+        menu.classList.remove("activo");
+    }
+});
+
 //CARRUSEL
 const images = document.querySelectorAll('.imagenes_carrusel');
 const prevBtn = document.getElementById('prev');
@@ -31,13 +46,13 @@ function resetInterval()
     interval = setInterval(nextImage, 4000);
 }
 
-nextBtn.addEventListener('click', () => 
+nextBtn.addEventListener("click", () => 
 {
     nextImage();
     resetInterval();
 });
 
-prevBtn.addEventListener('click', () => 
+prevBtn.addEventListener("click", () => 
 {
     prevImage();
     resetInterval();

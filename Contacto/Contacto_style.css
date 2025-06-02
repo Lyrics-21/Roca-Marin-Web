@@ -38,7 +38,7 @@ nav
 {
     margin: 10px;
 }
-#botones a
+.texto_nav
 {
     font-family: 'Questrial';
     font-size: 18px;
@@ -48,13 +48,13 @@ nav
     margin-right: 40px;
     transition: transform 0.2s ease, color 0.2s ease;
 }
-#botones a:hover 
+.texto_nav:hover 
 {
     transform: scale(1.1);
     transition: transform 0.2s ease;
     color: #c63303;
 }
-#botones a:active 
+.texto_nav:active 
 {
     transform: scale(0.95);
 }
@@ -66,11 +66,40 @@ nav
 }
 
 /* ZONA MAIN*/
+#titulos_main
+{
+    font-size: 42px;
+    font-family: 'Asap Condensed';
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 1.1;
+    margin: 0;
+}
+#container_titulo
+{
+    display: grid;
+    width: 60%;
+    height: 11vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-top: 90px;
+    padding: 20px 80px 20px 80px;
+}
+#lineas
+{
+    width: 80%;
+    height: 4px;
+    background-color: white;
+    border-radius: 30px;
+}
+
 #container_form
 {
     width: 60%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 180px;
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.85);
@@ -135,17 +164,27 @@ nav
 #container_footer
 {
     display: flex;
-    justify-content: space-around;
+    position: relative;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.85);
-    padding: 45px;
+    padding: 45px 150px 45px 150px;
+    overflow: hidden;
 }
-#linea_footer
+#rayo_footer img
 {
-    width: 3px;
-    height: 200px;
-    background-color: white;
-    border-radius: 30px;
+    width: 380px;
+    height: auto;
+    opacity: 0.9;
+}
+#rayo_footer
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 #container_redes
 {
@@ -178,6 +217,7 @@ nav
     justify-content: center;
     overflow: hidden;
     transition-duration: 1s;
+    z-index: 10;
 }
 /* Whatsapp*/
 .containerOne:hover
@@ -236,5 +276,125 @@ nav
     {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/*//////CONTENIDO RESPONSIVE//////*/
+
+/*NAV RESPONSIVE CON MENU DESPLEGABLE*/
+#container_menu
+{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    display: none;
+}
+#container_burger
+{
+    display: flex;
+    z-index: 15;
+}
+#menu_desplegable
+{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgb(111, 111, 111, 0.85);
+    padding: 80px 20px 30px 50px;
+    height: auto;
+    gap: 50px;
+    border-bottom-right-radius: 40px;
+}
+#menu_desplegable.activo 
+{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.burger 
+{
+    position: relative;
+    width: 32px;
+    height: 28px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.burger input 
+{
+    display: none;
+}
+
+.burger span 
+{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #c63303;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) 
+{
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) 
+{
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) 
+{
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) 
+{
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2)
+{
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3)
+{
+    transform: rotate(-45deg);
+    top: 22.5px; 
+    left: 5px;
+}
+
+@media only screen and (max-width: 790px)
+{
+    #container_menu
+    {
+        display: flex;
+    }
+    #botones
+    {
+        display: none;
     }
 }
