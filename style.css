@@ -313,78 +313,64 @@ nav
 #categorias
 {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 120px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px;
 }
-.container_categorias
+.container_categoria
 {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 340px;
     height: 360px;
     border-radius: 30px;
-}
-
-.imagen_wrapper 
-{
-    position: absolute;
-    overflow: hidden;
-    width: 340px;
-    height: 360px;
-    border-radius: 30px;
-}
-
-.container_categorias img
-{
-    position: absolute;
-    width: 500px;
-    height: 360px;
+    background-size: cover;
+    background-position: center;
+    perspective: 1000px;
     cursor: pointer;
 }
-.container_categorias h3
+.container_categoria h3
 {
     position: absolute;
-    text-align: center;
-    letter-spacing: 5px;
-    font-weight: lighter;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-    bottom: 0;
-    width: 100%;
-    padding: 10px 0;
-    margin-left: 0;
+    padding-bottom: 5px; 
 }
-#primera_imagen
+#container_primera_imagen
 {
-    width: 340px;
-    height: 360px;
+    background-image: url('Recursos/Domiciliar.jpg');
 }
-#segunda_imagen
+#comercial
 {
-    left: -120px; 
+    background-image: url('Recursos/Comercial.jpg');
 }
-#tercera_imagen
+#industrial
 {
-    left: -50px; 
+    background-image: url('Recursos/Industrial.jpg'); 
 }
 
-.lamina_logo
+.lamina_logo 
 {
-    position: absolute;
-    width: 340px;
-    height: 360px;
+    position: relative;
+    width: 100%;
+    height: 100%;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
-    align-items: center; 
-    
-    transform: translateY(0);
-    transition: transform 0.4s ease;
+    align-items: center;
+
+    transform: rotateY(0deg);
+    transform-origin: left;
+    opacity: 1;
+    transition: transform 0.7s ease, opacity 1s ease;
 }
-/*Animacion categorias*/
-.container_categorias:hover .lamina_logo 
+
+.container_categoria:hover .lamina_logo 
 {
-    transform: translateY(100vh);
-    transition: transform 0.9s ease;
+    transform: rotateY(90deg);
+    opacity: 0;
 }
 
 .lamina_logo img
@@ -411,13 +397,13 @@ nav
 .container_expandir
 {
     position: absolute;
-    width: 85vh;
+    top: 0;
+    left: 0;
+    width: 680px;
     height: 100%;
     border-radius: 30px;
-    background-color: #6f6f6f; 
-    z-index: 20;
-    animation: expandirAncho 0.4s ease forwards;
-    overflow: hidden;
+    background-color: #6f6f6f;
+    z-index: 1;
 }
 
 #container_expandir_derecha
@@ -475,8 +461,9 @@ nav
 
 #primer_expandir, #segundo_expandir
 {
-    display: none;
 }
+
+
 
 /*ZONA CLIENTES*/
 #container_clientes
@@ -756,6 +743,7 @@ nav
     {
         height: 100%;
     }
+    /*
     #categorias
     {
         display: grid;
@@ -764,6 +752,7 @@ nav
         margin-left: 70px;
         gap: 70px;
     }
+    */
     .linea
     {
         height: 100px;
@@ -1004,6 +993,15 @@ nav
     {
         max-width: 280px;
     }
+    .container_titulo
+    {
+        padding-left: 20px;
+    }
+    .titulos_main
+    {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
 }
 @media only screen and (max-width: 370px)
 {
@@ -1038,15 +1036,6 @@ nav
     #felchas_carrusel
     {
         padding: 0 10px;
-    }
-    .container_titulo
-    {
-        padding-left: 20px;
-    }
-    .titulos_main
-    {
-        font-size: 11px;
-        letter-spacing: 2px;
     }
     .lineas
     {
