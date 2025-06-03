@@ -24,7 +24,7 @@ nav
     width: 100%;
     position: fixed;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
     z-index: 50;
 }
 
@@ -70,7 +70,7 @@ nav
     width: 75%;
     margin: auto;
     margin-top: 130px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
     border-radius: 40px;
     scroll-margin-top: 130px;
 }
@@ -160,7 +160,7 @@ nav
     font-size: 1.4rem;
     line-height: 2;
     margin-left: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #info
@@ -177,7 +177,7 @@ nav
     background-color: white;
     border-radius: 30px;
     margin-right: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 .conteiner_info
 {
@@ -195,7 +195,7 @@ nav
     align-items: center;
     width: 60%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     padding: 20px 20px 20px 60px;
@@ -235,7 +235,7 @@ nav
     width: 70%;
     margin: auto;
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
     padding: 60px;
     margin-top: 50px;
     overflow: hidden;
@@ -284,7 +284,7 @@ nav
     width: 365px;
     height: 245px;
     border-radius: 30px;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
 #container_proovedores
@@ -426,7 +426,7 @@ nav
     font-size: 20px;
     line-height: 2;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
 .container_listas
@@ -490,7 +490,7 @@ nav
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.65);
     padding: 45px 150px 45px 150px;
     overflow: hidden;
 }
@@ -743,16 +743,6 @@ nav
     {
         height: 100%;
     }
-    /*
-    #categorias
-    {
-        display: grid;
-        justify-content: left;
-        margin-top: 70px;
-        margin-left: 70px;
-        gap: 70px;
-    }
-    */
     .linea
     {
         height: 100px;
@@ -999,7 +989,7 @@ nav
     }
     .titulos_main
     {
-        font-size: 13px;
+        font-size: 14px;
         letter-spacing: 2px;
     }
 }
