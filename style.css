@@ -177,7 +177,7 @@ nav
     background-color: white;
     border-radius: 30px;
     margin-right: 40px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 .conteiner_info
 {
@@ -760,6 +760,7 @@ nav
     {
         display: grid;
         justify-content: left;
+        margin-top: 70px;
         margin-left: 70px;
         gap: 70px;
     }
@@ -834,6 +835,17 @@ nav
     .texto_info
     {
         font-size: 1rem;
+    }
+
+    #categorias
+    {
+        
+    }
+
+    #container_clientes img
+    {
+        width: 100px;
+        height: 100px;
     }
 }
 @media only screen and (max-width: 790px)
@@ -954,13 +966,23 @@ nav
 }
 @media only screen and (max-width: 500px)
 {
+    #marca img
+    {
+        width: 200px;
+        height: 30px;
+    }
     .texto_qs p
+    {
+        font-size: small;
+    }
+    .texto_qs 
     {
         font-size: small;
     }
     .lineas_qs
     {
-        width: 100%;
+        width: 95%;
+        height: 2.5px;
     }
     #Rayo
     {
@@ -969,16 +991,14 @@ nav
     }
     #container_proovedores img
     {
-        width: 100px;
-        height: 50px;
-    }
-    .texto_qs
-    {
-        font-size: 9px;
+        width: 110px;
+        height: 60px;
     }
     .texto_listas
     {
-        font-size: 11px;
+        font-size: 10px;
+        line-height: 1.5;
+        margin-bottom: 5px;
     }
     #container_proovedores
     {
@@ -1021,11 +1041,12 @@ nav
     }
     .container_titulo
     {
-        padding-left: 30px;
+        padding-left: 20px;
     }
     .titulos_main
     {
-        font-size: 15px;
+        font-size: 11px;
+        letter-spacing: 2px;
     }
     .lineas
     {
