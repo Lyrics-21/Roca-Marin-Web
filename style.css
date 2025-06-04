@@ -69,7 +69,7 @@ nav
     justify-content: space-between;
     width: 75%;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 80px;
     background-color: rgba(0, 0, 0, 0.65);
     border-radius: 40px;
     scroll-margin-top: 130px;
@@ -465,8 +465,8 @@ nav
 }
 #cruz_derecha
 {
-    left: 0 !important;
-    margin: 20px 0 0 25px !important;
+    left: 0;
+    margin: 20px 0 0 25px;
 }
 
 #primer_expandir, #segundo_expandir
@@ -1021,7 +1021,7 @@ nav
     }
     #cruz_derecha
     {
-        margin: 20px 0 0 20px !important;
+        margin: 20px 0 0 20px;
     }
 }
 @media only screen and (max-width: 790px)
@@ -1114,7 +1114,7 @@ nav
     }
     #cruz_derecha
     {
-        margin: 17px 0 0 17px !important;
+        margin: 17px 0 0 17px;
     }
 }
 @media only screen and (max-width: 700px)
@@ -1257,53 +1257,54 @@ nav
 
     #categorias
     {
+        display: grid;
+        justify-content: left;
+        gap: 20px;
         padding: 20px;
         padding-bottom: 0;
     }
+        .texto_listas
+    {
+        line-height: 15px;
+    }
     .container_expandir
     {
-        animation: expandirAnchoSextoResponsive 0.4s ease forwards;
-        border-radius: 13px;
+        border-radius: 15px;
     }
     #container_expandir_derecha
     {
-        animation: expandirAnchoSextoResponsive 0.4s ease forwards;
-        border-radius: 13px;
-    }
-    .texto_listas
-    {
-        font-size: 6px;
-    }
-    .container_listas
-    {
-        padding-right: 5px;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
     }
     #container_lista_derecha
     {
-        padding-left: 16px;
+        justify-content: right;
+        padding-right: 20px;
     }
     .container_imagenes
     {
-        width: 90px;
-        height: 100px;
-        border-radius: 13px;
-    }
-    .lamina_logo
-    {
-        border-radius: 13px;
+        border-radius: 15px;
     }
     .container_categoria h3
     {
-        font-size: 6px;
+        font-size: 8px;
+        padding-bottom: 1px;
     }
+    .lamina_logo
+    {
+        border-radius: 15px;
+    }
+
     .cruz
     {
-        width: 9px;
         margin: 10px 10px 0 0;
     }
     #cruz_derecha
     {
-        margin: 10px 0 0 10px !important;
+        left: auto;
+        right: 0;
+        margin: 10px 10px 0 0;
     }
 }
 @media only screen and (max-width: 390px)
