@@ -177,7 +177,7 @@ nav
     background-color: white;
     border-radius: 30px;
     margin-right: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7);
 }
 .conteiner_info
 {
@@ -316,50 +316,57 @@ nav
     justify-content: space-around;
     align-items: center;
     padding: 60px;
+    margin-top: 70px;
 }
 .container_categoria
 {
     position: relative;
+}
+.container_imagenes
+{
+    position: relative;
+    z-index: 20;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     width: 340px;
     height: 360px;
-    border-radius: 30px;
     background-size: cover;
     background-position: center;
-    perspective: 1000px;
+    border-radius: 30px;
     cursor: pointer;
-}
-.container_categoria h3
-{
-    position: absolute;
-    padding-bottom: 5px; 
+    perspective: 1000px;
 }
 #container_primera_imagen
 {
     background-image: url('Recursos/Domiciliar.jpg');
 }
-#comercial
+#container_segunda_imagen
 {
     background-image: url('Recursos/Comercial.jpg');
 }
-#industrial
+#container_tercera_imagen
 {
     background-image: url('Recursos/Industrial.jpg'); 
+}
+.container_categoria h3
+{
+    position: absolute;
+    cursor: default;
+    padding-bottom: 5px; 
 }
 
 .lamina_logo 
 {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     transform: rotateY(0deg);
     transform-origin: left;
@@ -375,8 +382,8 @@ nav
 
 .lamina_logo img
 {
-    width: 130px;
-    height: 130px;
+    width: 40%;
+    height: auto;
 }
 
 /*Categoria Desplegable*/
@@ -389,7 +396,7 @@ nav
   }
   to 
   {
-    width: 85vh;
+    width: 860px;
     opacity: 1;
   }
 }
@@ -399,25 +406,27 @@ nav
     position: absolute;
     top: 0;
     left: 0;
-    width: 680px;
     height: 100%;
     border-radius: 30px;
     background-color: #6f6f6f;
-    z-index: 1;
+    animation: expandirAncho 0.4s ease forwards;
+    overflow: hidden;
+    z-index: 10;
 }
 
 #container_expandir_derecha
 {
     position: absolute;
+    display: none;
+    top: 0;
     right: 0;
-    width: 85vh;
+    width: 860px;
     height: 100%;
     border-radius: 30px;
     background-color: #6f6f6f;
-    z-index: 20;
-    display: none;
     animation: expandirAncho 0.4s ease forwards;
     overflow: hidden;
+    z-index: 10;
 }
 
 .texto_listas
@@ -439,14 +448,15 @@ nav
 }
 #container_lista_derecha
 {
-    justify-content:left !important;
-    padding-left: 50px !important;
+    justify-content:left;
+    padding-left: 70px;
 }
 
 .cruz
 {
-    width: 25px !important;
-    height: auto !important;
+    position: absolute;
+    width: 25px;
+    height: auto;
     top: 0;
     right: 0;
     padding: 0;
@@ -461,6 +471,7 @@ nav
 
 #primer_expandir, #segundo_expandir
 {
+    display: none;
 }
 
 
@@ -698,6 +709,120 @@ nav
     left: 5px;
 }
 
+
+@keyframes expandirAnchoPrimerResponsive
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 710px;
+    opacity: 1;
+  }
+}
+@keyframes expandirAnchoSegundoResponsive
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 560px;
+    opacity: 1;
+  }
+}
+@keyframes expandirAnchoTercerResponsive
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 450px;
+    opacity: 1;
+  }
+}
+@keyframes expandirAnchoCuartoResponsive
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 345px;
+    opacity: 1;
+  }
+}
+@keyframes expandirAnchoQuintoResponsive
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 300px;
+    opacity: 1;
+  }
+}
+@keyframes expandirAnchoSextoResponsive
+{
+  from 
+  {
+    width: 0;
+    opacity: 0;
+  }
+  to 
+  {
+    width: 236px;
+    opacity: 1;
+  }
+}
+
+/*////////////////////////////////////*/
+
+@media only screen and (max-width: 1400px)
+{
+    .container_expandir
+    {
+        animation: expandirAnchoPrimerResponsive 0.4s ease forwards;
+    }
+    #container_expandir_derecha
+    {
+        animation: expandirAnchoPrimerResponsive 0.4s ease forwards;
+    }
+    .texto_listas
+    {
+        font-size: 18px;
+    }
+    .container_listas
+    {
+        padding-right: 55px;
+    }
+    #container_lista_derecha
+    {
+        padding-left: 80px;
+    }
+    .container_imagenes
+    {
+        width: 240px;
+        height: 260px;
+    }
+    .container_categoria h3
+    {
+        font-size: medium;
+    }
+}
 @media only screen and (max-width: 1300px)
 {
     #encabezado
@@ -777,6 +902,42 @@ nav
         left: 15%;
         width: 1300px;
     }
+
+
+
+    .container_expandir
+    {
+        animation: expandirAnchoSegundoResponsive 0.4s ease forwards;
+    }
+    #container_expandir_derecha
+    {
+        animation: expandirAnchoSegundoResponsive 0.4s ease forwards;
+    }
+    .texto_listas
+    {
+        font-size: 13px;
+    }
+    .container_listas
+    {
+        padding-right: 45px;
+    }
+    #container_lista_derecha
+    {
+        padding-left: 80px;
+    }
+    .container_imagenes
+    {
+        width: 200px;
+        height: 220px;
+    }
+    .container_categoria h3
+    {
+        font-size: small;
+    }
+    .cruz
+    {
+        width: 16px;
+    }
 }
 
 @media only screen and (max-width: 1000px)
@@ -816,15 +977,51 @@ nav
         font-size: 1rem;
     }
 
-    #categorias
-    {
-        
-    }
-
     #container_clientes img
     {
         width: 100px;
         height: 100px;
+    }
+
+
+    .container_expandir
+    {
+        animation: expandirAnchoTercerResponsive 0.4s ease forwards;
+    }
+    #container_expandir_derecha
+    {
+        animation: expandirAnchoTercerResponsive 0.4s ease forwards;
+    }
+    .texto_listas
+    {
+        font-size: 10px;
+    }
+    .container_listas
+    {
+        padding-right: 45px;
+    }
+    #container_lista_derecha
+    {
+        padding-left: 60px;
+    }
+    .container_imagenes
+    {
+        width: 160px;
+        height: 180px;
+    }
+    .container_categoria h3
+    {
+        font-size: 10px;
+        margin-left: 8px;
+    }
+    .cruz
+    {
+        width: 14px;
+        margin: 20px 20px 0 0;
+    }
+    #cruz_derecha
+    {
+        margin: 20px 0 0 20px !important;
     }
 }
 @media only screen and (max-width: 790px)
@@ -860,11 +1057,6 @@ nav
     {
         width: 90%;
     }
-    .texto_listas
-    {
-        font-size: 15px;
-    }
-
     #container_proovedores
     {
         margin: auto;
@@ -873,10 +1065,56 @@ nav
         overflow-x: auto;
         overflow-y: hidden;
     }
-
     #Rayo
     {
         display: none;
+    }
+
+    #categorias
+    {
+        margin-top: 0;
+        padding: 40px;
+    }
+    .container_expandir
+    {
+        animation: expandirAnchoCuartoResponsive 0.4s ease forwards;
+    }
+    #container_expandir_derecha
+    {
+        animation: expandirAnchoCuartoResponsive 0.4s ease forwards;
+    }
+    .texto_listas
+    {
+        font-size: 8px;
+        line-height: 1.7;
+    }
+    .container_listas
+    {
+        padding-right: 35px;
+    }
+    #container_lista_derecha
+    {
+        padding-left: 50px;
+    }
+    .container_imagenes
+    {
+        width: 120px;
+        height: 130px;
+    }
+    .container_categoria h3
+    {
+        font-size: 7px;
+        letter-spacing: 2px;
+        margin-left: 5px;
+    }
+    .cruz
+    {
+        width: 11px;
+        margin: 17px 17px 0 0;
+    }
+    #cruz_derecha
+    {
+        margin: 17px 0 0 17px !important;
     }
 }
 @media only screen and (max-width: 700px)
@@ -912,9 +1150,8 @@ nav
     }
     .container_titulo
     {
-        margin-top: 100px;
-        padding: 15px 15px 15px 50px;
-        
+        margin-top: 70px;
+        padding: 15px 15px 15px 50px; 
     }
     .titulos_main
     {
@@ -942,7 +1179,33 @@ nav
         z-index: 10;
         width: 100%;
     }
+
+    #categorias
+    {
+        padding-bottom: 0;
+    }
+    .container_expandir
+    {
+        animation: expandirAnchoQuintoResponsive 0.4s ease forwards;
+    }
+    #container_expandir_derecha
+    {
+        animation: expandirAnchoQuintoResponsive 0.4s ease forwards;
+    }
+    .texto_listas
+    {
+        font-size: 7px;
+    }
+    .container_listas
+    {
+        padding-right: 15px;
+    }
+    #container_lista_derecha
+    {
+        padding-left: 35px;
+    }
 }
+
 @media only screen and (max-width: 500px)
 {
     #marca img
@@ -973,12 +1236,6 @@ nav
         width: 110px;
         height: 60px;
     }
-    .texto_listas
-    {
-        font-size: 10px;
-        line-height: 1.5;
-        margin-bottom: 5px;
-    }
     #container_proovedores
     {
         max-width: 280px;
@@ -986,14 +1243,70 @@ nav
     .container_titulo
     {
         padding-left: 20px;
+        margin-top: 40px;
     }
     .titulos_main
     {
         font-size: 14px;
         letter-spacing: 2px;
     }
+    #container_clientes
+    {
+        margin: 40px;
+    }
+
+    #categorias
+    {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+    .container_expandir
+    {
+        animation: expandirAnchoSextoResponsive 0.4s ease forwards;
+        border-radius: 13px;
+    }
+    #container_expandir_derecha
+    {
+        animation: expandirAnchoSextoResponsive 0.4s ease forwards;
+        border-radius: 13px;
+    }
+    .texto_listas
+    {
+        font-size: 6px;
+    }
+    .container_listas
+    {
+        padding-right: 5px;
+    }
+    #container_lista_derecha
+    {
+        padding-left: 16px;
+    }
+    .container_imagenes
+    {
+        width: 90px;
+        height: 100px;
+        border-radius: 13px;
+    }
+    .lamina_logo
+    {
+        border-radius: 13px;
+    }
+    .container_categoria h3
+    {
+        font-size: 6px;
+    }
+    .cruz
+    {
+        width: 9px;
+        margin: 10px 10px 0 0;
+    }
+    #cruz_derecha
+    {
+        margin: 10px 0 0 10px !important;
+    }
 }
-@media only screen and (max-width: 370px)
+@media only screen and (max-width: 390px)
 {
     #encabezado
     {

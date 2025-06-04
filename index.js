@@ -60,62 +60,80 @@ prevBtn.addEventListener("click", () =>
 
 
 //CATEGORIAS
-const categorias = document.querySelectorAll(".imagen_wrapper img");
+const categorias = document.querySelectorAll(".container_imagenes");
 
 const primer_expandir = document.getElementById("primer_expandir");
 const segundo_expandir = document.getElementById("segundo_expandir");
 const tercer_expandir = document.getElementById("container_expandir_derecha");
 const conjunto_expandir = [primer_expandir, segundo_expandir, tercer_expandir];
-const primera_lamina = document.getElementById("primera_lamina");
-const segunda_lamina = document.getElementById("segunda_lamina");
-const tercera_lamina = document.getElementById("tercera_lamina");
-const conjunto_laminas = [primera_lamina, segunda_lamina, tercera_lamina];
-
 
 const container_primera_imagen = document.getElementById("container_primera_imagen");
 const container_segunda_imagen = document.getElementById("container_segunda_imagen");
 const container_tercera_imagen = document.getElementById("container_tercera_imagen");
 const containers = [container_primera_imagen, container_segunda_imagen, container_tercera_imagen];
 
+const primera_lamina = document.getElementById("primera_lamina");
+const segunda_lamina = document.getElementById("segunda_lamina");
+const tercera_lamina = document.getElementById("tercera_lamina");
+const conjunto_laminas = [primera_lamina, segunda_lamina, tercera_lamina];
+
 const cruzes = document.querySelectorAll(".cruz");
 
-categorias.forEach(imagen => 
+categorias.forEach(categoria =>
 {
-    imagen.addEventListener("click", () =>
+    categoria.addEventListener("click", () =>
     {
-        switch (imagen.id)
+        switch (categoria.id)
         {
-            case "primera_imagen":
+            case "container_primera_imagen":
                 resaltarDiv(primer_expandir);
+                ocultarLamina(primera_lamina);
                 cambiarZindex(container_primera_imagen);
-                ocultarLamina(primera_lamina)
                 break;
-            case "segunda_imagen":
+
+            case "container_segunda_imagen":
                 resaltarDiv(segundo_expandir);
                 cambiarZindex(container_segunda_imagen);
-                ocultarLamina(segunda_lamina)
+                ocultarLamina(segunda_lamina);
                 break;
-                case "tercera_imagen":    
+
+            case "container_tercera_imagen":
                 resaltarDiv(tercer_expandir);
                 cambiarZindex(container_tercera_imagen);
-                ocultarLamina(tercera_lamina)
+                ocultarLamina(tercera_lamina);
                 break;
         }
-    }); 
+    });
 });
+
+//FUNCIONES
+
+function resaltarDiv(div)
+{
+    conjunto_expandir.forEach(container =>
+    {
+        if(container === div)
+        {
+            container.style.display = "block";
+            container.style.cursor = "default";
+        }
+        else
+        {
+            container.style.display = "none";
+            container.style.cursor = "pointer";
+        }
+    });
+};
 
 cruzes.forEach(cruz =>
 {
     cruz.addEventListener("click", () =>
     {
         resaltarDiv(null);
-        cambiarZindex(null);
-        ocultarLamina(null)  
+        ocultarLamina(null);
     });
 
 });
-
-//FUNCIONES
 
 function ocultarLamina(lamina_ocultar)
 {
@@ -132,32 +150,17 @@ function ocultarLamina(lamina_ocultar)
     });
 };
 
-function resaltarDiv(div)
-{
-    conjunto_expandir.forEach(container =>
-    {
-        if(container === div)
-        {
-            container.style.display = "block";
-        }
-        else
-        {
-            container.style.display = "none";
-        }
-    });
-}
-
 function cambiarZindex(imagen) 
 {
     containers.forEach(container => 
     {
-        if (container === imagen) 
+        if (container == imagen) 
         {
-            container.style.zIndex = 25;
+            container.style.zIndex = 20;
         }
         else
         {
-            container.style.zIndex = 10;
+            container.style.zIndex = 5;
         }
     });
 };
