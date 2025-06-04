@@ -81,29 +81,32 @@ const cruzes = document.querySelectorAll(".cruz");
 
 categorias.forEach(categoria =>
 {
-    categoria.addEventListener("click", () =>
+    if (window.innerWidth > 500)
     {
-        switch (categoria.id)
+        categoria.addEventListener("click", () =>
         {
-            case "container_primera_imagen":
-                resaltarDiv(primer_expandir);
-                ocultarLamina(primera_lamina);
-                cambiarZindex(container_primera_imagen);
-                break;
-
-            case "container_segunda_imagen":
-                resaltarDiv(segundo_expandir);
-                cambiarZindex(container_segunda_imagen);
-                ocultarLamina(segunda_lamina);
-                break;
-
-            case "container_tercera_imagen":
-                resaltarDiv(tercer_expandir);
-                cambiarZindex(container_tercera_imagen);
-                ocultarLamina(tercera_lamina);
-                break;
-        }
-    });
+            switch (categoria.id)
+            {
+                case "container_primera_imagen":
+                    resaltarDiv(primer_expandir);
+                    ocultarLamina(primera_lamina);
+                    cambiarZindex(container_primera_imagen);
+                    break;
+    
+                case "container_segunda_imagen":
+                    resaltarDiv(segundo_expandir);
+                    cambiarZindex(container_segunda_imagen);
+                    ocultarLamina(segunda_lamina);
+                    break;
+    
+                case "container_tercera_imagen":
+                    resaltarDiv(tercer_expandir);
+                    cambiarZindex(container_tercera_imagen);
+                    ocultarLamina(tercera_lamina);
+                    break;
+            }
+        });
+    }
 });
 
 //FUNCIONES

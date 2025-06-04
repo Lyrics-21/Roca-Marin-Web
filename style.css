@@ -484,14 +484,17 @@ nav
     width: 70%;
     height: auto;
     margin: 100px auto 100px auto;
-    background-color: #6f6f6f;
+    background-color: rgba(125, 125, 125, 0.7);
     padding: 40px;
     border-radius: 30px;
+    border: 2px solid #c63303;
+    gap: 30px;
 }
 #container_clientes img
 {
-    width: 250px;
-    height: 250px;
+    border-radius: 30px;
+    width: 15%;
+    height: auto;
 }
 
 /* ZONA FOOTER */
@@ -1344,9 +1347,6 @@ nav
     }
 
 
-    #container_footer
-    {
-    }
     #marca_footer
     {
         width: 30%;
@@ -1459,8 +1459,13 @@ nav
         border-radius: 15px;
         animation: expandirAnchoCuartoResponsive 0.4s ease forwards;
     }
+    #primer_expandir, #segundo_expandir
+    {
+        display: block;
+    }
     #container_expandir_derecha
     {
+        display: block;
         top: 0;
         left: 0;
         border-radius: 15px;
@@ -1488,16 +1493,9 @@ nav
     {
         border-radius: 15px;
     }
-
     .cruz
     {
-        margin: 10px 10px 0 0;
-    }
-    #cruz_derecha
-    {
-        left: auto;
-        right: 0;
-        margin: 10px 10px 0 0;
+        display: none;
     }
 
 
@@ -1586,7 +1584,7 @@ nav
     }
 
 
-        #container_footer
+    #container_footer
     {
         padding: 5%;
     }
