@@ -1500,6 +1500,19 @@ nav
 
 
 
+    #container_clientes
+    {
+        margin: 20px auto 20px auto;
+        gap: 20px;
+    }
+    #container_clientes img
+    {
+        width: 15%;
+        height: auto;
+    }
+
+
+
     #container_footer
     {
         padding: 5%;
@@ -1582,6 +1595,15 @@ nav
     {
         max-width: 220px;
     }
+
+
+    #container_clientes
+    {
+        padding: 20px;
+        margin: 20px auto 20px auto;
+        gap: 10px;
+    }
+
 
 
     #container_footer
