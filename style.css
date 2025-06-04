@@ -69,7 +69,7 @@ nav
     justify-content: space-between;
     width: 75%;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 150px;
     background-color: rgba(0, 0, 0, 0.65);
     border-radius: 40px;
     scroll-margin-top: 130px;
@@ -167,7 +167,7 @@ nav
 {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .linea
@@ -497,20 +497,24 @@ nav
 /* ZONA FOOTER */
 #container_footer
 {
-    display: flex;
     position: relative;
+    display: flex;
+    margin-bottom: 0;
+    bottom: 0;
+    padding: 3%;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.65);
-    padding: 45px 150px 45px 150px;
     overflow: hidden;
 }
-#rayo_footer img
+#marca_footer
 {
-    width: 380px;
+    position: relative;
+    width: 28%;
     height: auto;
-    opacity: 0.9;
+    margin-left: 60px;
 }
+
 #rayo_footer
 {
     position: absolute;
@@ -519,6 +523,12 @@ nav
     width: 100%;
     display: flex;
     justify-content: center;
+}
+#rayo_footer img
+{
+    width: 21%;
+    height: auto;
+    opacity: 0.9;
 }
 #container_redes
 {
@@ -791,6 +801,26 @@ nav
 
 /*////////////////////////////////////*/
 
+@media only screen and (max-width: 1550px)
+{
+    .socialSvg 
+    {
+        width: 35px;
+    }
+    #container_redes h3
+    {
+        font-size: 1.8rem;
+    }
+    #card 
+    {
+        gap: 50px;
+    }
+    .socialContainer 
+    {
+        width: 65px;
+        height: 65px;
+    }
+}
 @media only screen and (max-width: 1400px)
 {
     .container_expandir
@@ -938,10 +968,48 @@ nav
     {
         width: 16px;
     }
+
+
+    .socialSvg 
+    {
+        width: 30px;
+    }
+    #container_redes
+    {
+        margin-right: 40px;
+    }
+    #container_redes h3
+    {
+        font-size: 1.6rem;
+        margin-bottom: 35px;
+    }
+    #card 
+    {
+        gap: 40px;
+    }
+    .socialContainer 
+    {
+        width: 50px;
+        height: 50px;
+    }
+    #rayo_footer img
+    {
+        width: 24%;
+    }
 }
 
 @media only screen and (max-width: 1000px)
 {
+
+    #encabezado
+    {
+        margin-top: 100px;
+    }
+    #info
+    {
+        margin-top: 50px;
+    }
+
     .imagenes_qs
     {
         display: none;
@@ -1023,7 +1091,39 @@ nav
     {
         margin: 20px 0 0 20px;
     }
+
+    #marca_footer
+    {
+        margin-left: 40px;
+    }
+    .socialSvg 
+    {
+        width: 27px;
+    }
+    #container_redes
+    {
+        margin-right: 30px;
+    }
+    #container_redes h3
+    {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+    #card 
+    {
+        gap: 25px;
+    }
+    .socialContainer 
+    {
+        width: 45px;
+        height: 45px;
+    }
+    #rayo_footer img
+    {
+        width: 22%;
+    }
 }
+
 @media only screen and (max-width: 790px)
 {
     #container_menu
@@ -1116,7 +1216,45 @@ nav
     {
         margin: 17px 0 0 17px;
     }
+
+
+    #container_footer
+    {
+        padding: 2%;
+    }
+    #marca_footer
+    {
+        margin-left: 20px;
+    }
+    .socialSvg 
+    {
+        width: 21px;
+    }
+    #container_redes
+    {
+        margin-right: 20px;
+    }
+    #container_redes h3
+    {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 21px;
+    }
+    .socialContainer 
+    {
+        width: 38px;
+        height: 38px;
+    }
+    #rayo_footer img
+    {
+        width: 20%;
+    }
 }
+
 @media only screen and (max-width: 700px)
 {
     #encabezado
@@ -1204,6 +1342,43 @@ nav
     {
         padding-left: 35px;
     }
+
+
+    #container_footer
+    {
+    }
+    #marca_footer
+    {
+        width: 30%;
+        margin-left: 15px;
+    }
+    .socialSvg 
+    {
+        width: 19px;
+    }
+    #container_redes
+    {
+        margin-right: 15px;
+    }
+    #container_redes h3
+    {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 13px;
+    }
+    .socialContainer 
+    {
+        width: 35px;
+        height: 35px;
+    }
+    #rayo_footer img
+    {
+        width: 19%;
+    }
 }
 
 @media only screen and (max-width: 500px)
@@ -1213,6 +1388,16 @@ nav
         width: 200px;
         height: 30px;
     }
+    #encabezado
+    {
+        margin-top: 90px;
+    }
+    #info
+    {
+        margin-top: 40px;
+    }
+
+
     .texto_qs p
     {
         font-size: small;
@@ -1263,24 +1448,32 @@ nav
         padding: 20px;
         padding-bottom: 0;
     }
-        .texto_listas
+    .texto_listas
     {
-        line-height: 15px;
+        font-size: 9px;
+        line-height: 16px;
     }
+
     .container_expandir
     {
         border-radius: 15px;
+        animation: expandirAnchoCuartoResponsive 0.4s ease forwards;
     }
     #container_expandir_derecha
     {
         top: 0;
         left: 0;
         border-radius: 15px;
+        animation: expandirAnchoCuartoResponsive 0.4s ease forwards;
     }
     #container_lista_derecha
     {
         justify-content: right;
-        padding-right: 20px;
+        padding-right: 30px;
+    }
+    .container_listas
+    {
+        padding-right: 15px;
     }
     .container_imagenes
     {
@@ -1306,12 +1499,54 @@ nav
         right: 0;
         margin: 10px 10px 0 0;
     }
+
+
+
+    #container_footer
+    {
+        padding: 5%;
+    }
+    #marca_footer
+    {
+        width: 35%;
+        margin-left: 0px;
+    }
+    .socialSvg 
+    {
+        width: 18px;
+    }
+    #container_redes
+    {
+        margin-right: 0px;
+    }
+    #container_redes h3
+    {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 6px;
+    }
+    .socialContainer 
+    {
+        width: 31px;
+        height: 31px;
+    }
+    #rayo_footer img
+    {
+        width: 20%;
+        height: 190px;
+    }
 }
+
 @media only screen and (max-width: 390px)
 {
     #encabezado
     {
         width: 100%;
+        margin-top: 80px;
     }
     #logo
     {
@@ -1348,5 +1583,44 @@ nav
     #container_proovedores
     {
         max-width: 220px;
+    }
+
+
+        #container_footer
+    {
+        padding: 5%;
+    }
+    #marca_footer
+    {
+        width: 35%;
+        margin-left: 0px;
+    }
+    .socialSvg 
+    {
+        width: 18px;
+    }
+    #container_redes
+    {
+        margin-right: 0px;
+    }
+    #container_redes h3
+    {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 6px;
+    }
+    .socialContainer 
+    {
+        width: 31px;
+        height: 31px;
+    }
+    #rayo_footer img
+    {
+        width: 20%;
+        height: 190px;
     }
 }
