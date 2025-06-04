@@ -226,6 +226,7 @@ nav
     border-radius: 30px;
     margin-bottom: 7px;
 }
+
 /*//////////////////////////////////////////*/
 #contenido_qs
 {
@@ -277,6 +278,15 @@ nav
 }
 .texto_qs ul
 {
+    z-index: 10;
+}
+.titulo_qs
+{
+    font-family: 'Questrial';
+    font-size: 20px;
+    line-height: 2;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
 .imagenes_qs
@@ -906,6 +916,7 @@ nav
         height: 100px;
         margin-right: 10px;
     }
+
     .container_titulo
     {
         margin-top: 100px;
@@ -1027,7 +1038,11 @@ nav
         justify-content: space-evenly;
         gap: 40px;
     }
-
+    .titulo_qs
+    {
+        font-size: 17px;
+        line-height: 1.4;
+    }
     .texto_qs 
     {
         position: relative;
@@ -1150,7 +1165,11 @@ nav
     {
         justify-content: left;
     }
-
+    .titulo_qs
+    {
+        font-size: 15px;
+        line-height: 1.2;
+    }
     #container_proovedores img
     {
         width: 150px;
@@ -1298,6 +1317,7 @@ nav
     {
         font-size: 20px;
     }
+
     .lineas
     {
         height: 3px;
@@ -1305,6 +1325,10 @@ nav
     #contenido_qs
     {
         padding: 30px;
+    }
+    .titulo_qs
+    {
+        font-size: 14px;
     }
     #container_proovedores
     {
@@ -1397,7 +1421,18 @@ nav
         margin-top: 40px;
     }
 
-
+    #quienes_somos
+    {
+        scroll-margin-top: 60px;
+    }
+    #nuestros_servicios
+    {
+        scroll-margin-top: 60px;
+    }
+    .titulo_qs
+    {
+        font-size: 11px;
+    }
     .texto_qs p
     {
         font-size: small;
@@ -1590,6 +1625,10 @@ nav
     .lineas
     {
         height: 2.5px;
+    }
+    .titulo_qs
+    {
+        font-size: 10px;
     }
     #container_proovedores
     {

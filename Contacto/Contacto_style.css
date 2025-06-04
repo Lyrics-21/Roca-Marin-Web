@@ -30,7 +30,7 @@ nav
     width: 100%;
     position: fixed;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.70);
     z-index: 20;
 }
 
@@ -66,6 +66,18 @@ nav
 }
 
 /* ZONA MAIN*/
+#container_titulo
+{
+    display: grid;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.70);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding: 20px 20px 20px 60px;
+    margin-top: 120px;
+}
 #titulos_main
 {
     font-size: 42px;
@@ -74,17 +86,6 @@ nav
     letter-spacing: 5px;
     line-height: 1.1;
     margin: 0;
-}
-#container_titulo
-{
-    display: grid;
-    width: 60%;
-    height: 11vh;
-    background-color: rgba(0, 0, 0, 0.85);
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    margin-top: 90px;
-    padding: 20px 80px 20px 80px;
 }
 #lineas
 {
@@ -102,7 +103,7 @@ nav
     margin-bottom: 180px;
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.70);
     border-radius: 30px;
     padding: 30px 0 10px 40px;
 }
@@ -163,20 +164,24 @@ nav
 /* ZONA FOOTER */
 #container_footer
 {
-    display: flex;
     position: relative;
+    display: flex;
+    margin-bottom: 0;
+    bottom: 0;
+    padding: 3%;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 45px 150px 45px 150px;
+    background-color: rgba(0, 0, 0, 0.70);
     overflow: hidden;
 }
-#rayo_footer img
+#marca_footer
 {
-    width: 380px;
+    position: relative;
+    width: 28%;
     height: auto;
-    opacity: 0.9;
+    margin-left: 60px;
 }
+
 #rayo_footer
 {
     position: absolute;
@@ -186,17 +191,22 @@ nav
     display: flex;
     justify-content: center;
 }
+#rayo_footer img
+{
+    width: 21%;
+    height: auto;
+    opacity: 0.9;
+}
 #container_redes
 {
     display: inline-block;
     text-align: center;
     font-family: 'Questrial';
+    font-size: 2rem;
 }
 #container_redes h3
 {
     margin-bottom: 40px;
-    font-size: 2.3rem !important;
-    font-weight: 610;
 }
 
 #card 
@@ -219,6 +229,8 @@ nav
     transition-duration: 1s;
     z-index: 10;
 }
+/*Animacion footer*/
+
 /* Whatsapp*/
 .containerOne:hover
 {
@@ -243,23 +255,10 @@ nav
     background-color:#EA4335;
     transition-duration: 0.3s;
 }
-
-.socialContainer:active 
-{
-    transform: scale(0.9);
-    transition-duration: 0.3s;
-}
-
 .socialSvg 
 {
     width: 45px;
 }
-
-.socialSvg path 
-{
-    fill: rgb(255, 255, 255);
-}
-
 .socialContainer:hover .socialSvg 
 {
     animation: slide-in-top 0.3s both;
@@ -387,6 +386,102 @@ nav
     left: 5px;
 }
 
+@media only screen and (max-width: 1550px)
+{
+    .socialSvg 
+    {
+        width: 35px;
+    }
+    #container_redes h3
+    {
+        font-size: 1.8rem;
+    }
+    #card 
+    {
+        gap: 50px;
+    }
+    .socialContainer 
+    {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media only screen and (max-width: 1300px)
+{
+    #titulos_main
+    {
+        font-size: 35px;
+    }
+
+
+    .socialSvg 
+    {
+        width: 30px;
+    }
+    #container_redes
+    {
+        margin-right: 40px;
+    }
+    #container_redes h3
+    {
+        font-size: 1.6rem;
+        margin-bottom: 35px;
+    }
+    #card 
+    {
+        gap: 40px;
+    }
+    .socialContainer 
+    {
+        width: 50px;
+        height: 50px;
+    }
+    #rayo_footer img
+    {
+        width: 24%;
+    }
+}
+
+@media only screen and (max-width: 1000px)
+{
+    #marca_footer
+    {
+        margin-left: 40px;
+    }
+
+
+
+    
+
+    .socialSvg 
+    {
+        width: 27px;
+    }
+    #container_redes
+    {
+        margin-right: 30px;
+    }
+    #container_redes h3
+    {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+    #card 
+    {
+        gap: 25px;
+    }
+    .socialContainer 
+    {
+        width: 45px;
+        height: 45px;
+    }
+    #rayo_footer img
+    {
+        width: 22%;
+    }
+}
+
 @media only screen and (max-width: 790px)
 {
     #container_menu
@@ -396,5 +491,175 @@ nav
     #botones
     {
         display: none;
+    }
+
+    #container_footer
+    {
+        padding: 2%;
+    }
+    #marca_footer
+    {
+        margin-left: 20px;
+    }
+    .socialSvg 
+    {
+        width: 21px;
+    }
+    #container_redes
+    {
+        margin-right: 20px;
+    }
+    #container_redes h3
+    {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 21px;
+    }
+    .socialContainer 
+    {
+        width: 38px;
+        height: 38px;
+    }
+    #rayo_footer img
+    {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    #marca_footer
+    {
+        width: 30%;
+        margin-left: 15px;
+    }
+
+    #titulos_main
+    {
+        font-size: 20px;
+    }
+    #lineas
+    {
+        height: 3px;
+    }
+
+    .socialSvg 
+    {
+        width: 19px;
+    }
+    #container_redes
+    {
+        margin-right: 15px;
+    }
+    #container_redes h3
+    {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 13px;
+    }
+    .socialContainer 
+    {
+        width: 35px;
+        height: 35px;
+    }
+    #rayo_footer img
+    {
+        width: 19%;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    #marca img
+    {
+        width: 200px;
+        height: 30px;
+    }
+
+    #container_footer
+    {
+        padding: 5%;
+    }
+    #marca_footer
+    {
+        width: 35%;
+        margin-left: 0px;
+    }
+    .socialSvg 
+    {
+        width: 18px;
+    }
+    #container_redes
+    {
+        margin-right: 0px;
+    }
+    #container_redes h3
+    {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 6px;
+    }
+    .socialContainer 
+    {
+        width: 31px;
+        height: 31px;
+    }
+    #rayo_footer img
+    {
+        width: 20%;
+        height: 190px;
+    }
+}
+
+@media only screen and (max-width: 390px)
+{
+    #container_footer
+    {
+        padding: 5%;
+    }
+    #marca_footer
+    {
+        width: 35%;
+        margin-left: 0px;
+    }
+    .socialSvg 
+    {
+        width: 18px;
+    }
+    #container_redes
+    {
+        margin-right: 0px;
+    }
+    #container_redes h3
+    {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    #card 
+    {
+        gap: 6px;
+    }
+    .socialContainer 
+    {
+        width: 31px;
+        height: 31px;
+    }
+    #rayo_footer img
+    {
+        width: 20%;
+        height: 190px;
     }
 }
