@@ -160,6 +160,20 @@ nav
 {
     transform: scale(0.95);
 }
+.contenedor-responsive
+{
+    display: grid !important;
+}
+#container_info
+{
+    display: flex;
+    flex-direction: column;
+}
+.info
+{
+    text-align: center;
+    font-size: medium;  
+}
 
 /* ZONA FOOTER */
 #container_footer
@@ -498,7 +512,7 @@ nav
     {
         gap: 5px;
     }
-        .info_footer
+    .info_footer
     {
         font-size: small;
     }
@@ -594,7 +608,22 @@ nav
         margin-right: 20px;
     }
 }
-
+@media only screen and (max-width: 767px)
+{
+    #imagen
+    {
+        width: 150px;
+    }   
+    .contenedor-responsive
+    {
+        display: flex !important;
+        gap: 20px;
+    }
+    .info
+    {
+        text-align: left;
+    }
+}
 @media only screen and (max-width: 700px)
 {
     #marca_footer
@@ -609,12 +638,13 @@ nav
     #container_redes
     {
         margin-right: 15px;
-        gap: 8px;
+        gap: 7px;
     }
     #container_redes h3
     {
         font-size: 0.9rem;
         margin-top: 5px;
+        margin-bottom: 0;
     }
     #card 
     {
@@ -632,7 +662,7 @@ nav
 
     #container_info_footer
     {
-        gap: 3px;
+        gap: 0px;
     }
     .info_footer
     {
@@ -655,6 +685,24 @@ nav
     {
         width: 85%;
         height: 2px;
+    }
+
+    #imagen
+    {
+        width: 100px;
+    }   
+    .info
+    {
+        font-size: small;
+    }
+
+    #container_footer
+    {
+        padding: 3% !important;
+    }
+    .info_footer
+    {
+        line-height: 1px;
     }
 }
 @media only screen and (max-width: 500px)
@@ -695,8 +743,11 @@ nav
     }
     #imagen
     {
-        width: 180px;
-        height: auto;
+        width: 140px;
+    }  
+    .info
+    {
+        font-size: small;
     }
 
 
@@ -781,5 +832,14 @@ nav
     #rayo_footer img
     {
         width: 20%;
+    }
+
+    #imagen
+    {
+        width: 110px;
+    }  
+    .info
+    {
+        font-size: 12px;
     }
 }
