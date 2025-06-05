@@ -345,6 +345,7 @@ nav
     background-size: cover;
     background-position: center;
     border-radius: 30px;
+    border: 2px solid #c63303;
     cursor: pointer;
     perspective: 1000px;
 }
@@ -531,15 +532,13 @@ nav
 #rayo_footer
 {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
     display: flex;
     justify-content: center;
+    margin-right: 60px;
 }
 #rayo_footer img
 {
-    width: 21%;
+    width: 9%;
     height: auto;
     opacity: 0.9;
 }
@@ -798,19 +797,6 @@ nav
     opacity: 1;
   }
 }
-@keyframes expandirAnchoSextoResponsive
-{
-  from 
-  {
-    width: 0;
-    opacity: 0;
-  }
-  to 
-  {
-    width: 236px;
-    opacity: 1;
-  }
-}
 
 /*////////////////////////////////////*/
 
@@ -1008,7 +994,7 @@ nav
     }
     #rayo_footer img
     {
-        width: 24%;
+        width: 11%;
     }
 }
 
@@ -1136,9 +1122,9 @@ nav
         width: 45px;
         height: 45px;
     }
-    #rayo_footer img
+    #rayo_footer
     {
-        width: 22%;
+        margin-right: 40px;
     }
 }
 
@@ -1273,7 +1259,11 @@ nav
     }
     #rayo_footer img
     {
-        width: 20%;
+        width: 9%;
+    }
+    #rayo_footer
+    {
+        margin-right: 20px;
     }
 }
 
@@ -1400,9 +1390,9 @@ nav
         width: 35px;
         height: 35px;
     }
-    #rayo_footer img
+    #rayo_footer
     {
-        width: 19%;
+        margin-right: 15px;
     }
 }
 
@@ -1583,8 +1573,11 @@ nav
     }
     #rayo_footer img
     {
-        width: 20%;
-        height: 190px;
+        width: 14%;
+    }
+    #rayo_footer
+    {
+        margin-right: 0px;
     }
 }
 
@@ -1645,7 +1638,6 @@ nav
     }
 
 
-
     #container_footer
     {
         padding: 5%;
@@ -1680,7 +1672,6 @@ nav
     }
     #rayo_footer img
     {
-        width: 20%;
-        height: 190px;
+        width: 18%;
     }
 }
