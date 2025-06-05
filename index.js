@@ -117,7 +117,7 @@ function resaltarDiv(div)
     {
         if(container === div)
         {
-            container.style.display = "block";
+            container.style.display = "flex";
             container.style.cursor = "default";
         }
         else

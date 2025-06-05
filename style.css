@@ -423,6 +423,10 @@ nav
     animation: expandirAncho 0.4s ease forwards;
     overflow: hidden;
     z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;  
 }
 
 #container_expandir_derecha
@@ -438,28 +442,32 @@ nav
     animation: expandirAncho 0.4s ease forwards;
     overflow: hidden;
     z-index: 10;
+
+    align-items: center;
+    justify-content: flex-start;  
 }
 
 .texto_listas
 {
+    margin-top: 20px;
     font-family: 'Questrial';
     font-size: 20px;
     line-height: 2;
+    list-style: none;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
 .container_listas
 {
-    height: 100%;
     display: flex;
-    justify-content:right;
+    flex-direction: column;
     align-items: center;
-    padding-right: 30px;
+    gap: 20px;
+    padding-right: 40px;
 }
 #container_lista_derecha
 {
-    justify-content:left;
     padding-left: 70px;
 }
 
@@ -483,6 +491,59 @@ nav
 #primer_expandir, #segundo_expandir
 {
     display: none;
+}
+
+.btn 
+{
+    width: 35%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Questrial';
+    text-decoration: none;
+    padding: 10px 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    background-color: #1c0786;
+}
+
+.btn:hover 
+{
+    transform: translateY(-3px);
+}
+
+.btn:active 
+{
+    transform: translateY(-1px);
+}
+
+.btn::after 
+{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn::after 
+{
+    background-color: #1c0786;
+}
+
+.btn:hover::after 
+{
+    transform: scaleX(1.2) scaleY(1.5);
+    opacity: 0;
 }
 
 
@@ -843,10 +904,12 @@ nav
     .container_listas
     {
         padding-right: 55px;
+        gap: 4px;
     }
     #container_lista_derecha
     {
         padding-left: 80px;
+        gap: 4px;
     }
     .container_imagenes
     {
@@ -960,10 +1023,12 @@ nav
     .container_listas
     {
         padding-right: 45px;
+        gap: 5px;
     }
     #container_lista_derecha
     {
         padding-left: 80px;
+        gap: 5px;
     }
     .container_imagenes
     {
@@ -977,6 +1042,10 @@ nav
     .cruz
     {
         width: 16px;
+    }
+    .btn
+    {
+        font-size: 10px;
     }
 
 
@@ -1093,6 +1162,13 @@ nav
     {
         padding-left: 60px;
     }
+    .btn
+    {
+        width: 50%;
+        padding: 7px 5px;
+        font-size: 9px;
+    }
+
     .container_imagenes
     {
         width: 160px;
@@ -1112,6 +1188,8 @@ nav
     {
         margin: 20px 0 0 20px;
     }
+
+
 
     #marca_footer
     {
@@ -1228,6 +1306,12 @@ nav
     #container_lista_derecha
     {
         padding-left: 50px;
+    }
+    .btn
+    {
+        width: 45%;
+        padding: 3px 5px;
+        font-size: 8px;
     }
     .container_imagenes
     {
@@ -1382,7 +1466,13 @@ nav
     }
     #container_lista_derecha
     {
-        padding-left: 35px;
+        padding-left: 20px;
+    }
+    .btn
+    {
+        width: 45%;
+        padding: 3px 5px;
+        font-size: 7px;
     }
 
 
@@ -1509,22 +1599,28 @@ nav
     }
     .texto_listas
     {
+        margin-top: 5px;
         font-size: 9px;
         line-height: 16px;
     }
-
     .container_expandir
     {
         border-radius: 15px;
         animation: expandirAnchoCuartoResponsive 0.4s ease forwards;
     }
+    .btn
+    {
+        width: 45%;
+        padding: 4px 3px;
+    }
     #primer_expandir, #segundo_expandir
     {
-        display: block;
+        display: flex;
     }
     #container_expandir_derecha
     {
-        display: block;
+        display: flex;
+        justify-content: flex-end;
         top: 0;
         left: 0;
         border-radius: 15px;
@@ -1532,11 +1628,11 @@ nav
     }
     #container_lista_derecha
     {
-        justify-content: right;
-        padding-right: 30px;
+        padding-right: 20px;
     }
     .container_listas
     {
+        padding-top: 0px;
         padding-right: 15px;
     }
     .container_imagenes
