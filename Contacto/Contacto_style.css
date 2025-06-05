@@ -197,16 +197,12 @@ nav
 }
 #container_redes
 {
-    display: inline-block;
+    display: grid;
     text-align: center;
+    gap: 25px;
     font-family: 'Questrial';
     font-size: 2rem;
 }
-#container_redes h3
-{
-    margin-bottom: 40px;
-}
-
 #card 
 {
     display: flex;
@@ -214,7 +210,6 @@ nav
     justify-content: center;
     gap: 60px;
 }
-
 .socialContainer 
 {
     width: 85px;
@@ -226,6 +221,15 @@ nav
     overflow: hidden;
     transition-duration: 1s;
     z-index: 10;
+}
+#container_info_footer
+{
+    display: flex;
+    justify-content: space-between;
+}
+.info_footer
+{
+    font-size: medium;
 }
 /*Animacion footer*/
 
@@ -404,7 +408,13 @@ nav
         height: 65px;
     }
 }
-
+@media only screen and (max-width: 1400px)
+{
+    #rayo_footer img
+    {
+        width: 10%;
+    }
+}
 @media only screen and (max-width: 1300px)
 {
     #titulos_main
@@ -412,12 +422,10 @@ nav
         font-size: 35px;
     }
 
-
     #container_form
     {
         width: 80%;
     }
-
 
     .socialSvg 
     {
@@ -426,11 +434,11 @@ nav
     #container_redes
     {
         margin-right: 40px;
+        gap: 15px;
     }
     #container_redes h3
     {
         font-size: 1.6rem;
-        margin-bottom: 35px;
     }
     #card 
     {
@@ -441,10 +449,16 @@ nav
         width: 50px;
         height: 50px;
     }
-
     #rayo_footer img
     {
         width: 11%;
+    }
+
+    #container_info_footer
+    {
+        display: grid;
+        justify-content: center;
+        gap: 5px;
     }
 }
 
@@ -454,8 +468,6 @@ nav
     {
         margin-left: 40px;
     }
-
-
     .socialSvg 
     {
         width: 27px;
@@ -467,7 +479,6 @@ nav
     #container_redes h3
     {
         font-size: 1.3rem;
-        margin-bottom: 25px;
     }
     #card 
     {
@@ -478,10 +489,18 @@ nav
         width: 45px;
         height: 45px;
     }
-
     #rayo_footer
     {
         margin-right: 40px;
+    }
+
+    #container_info_footer
+    {
+        gap: 5px;
+    }
+        .info_footer
+    {
+        font-size: small;
     }
 }
 
@@ -555,7 +574,6 @@ nav
     #container_redes h3
     {
         font-size: 1rem;
-        margin-bottom: 15px;
         margin-top: 5px;
     }
     #card 
@@ -567,10 +585,9 @@ nav
         width: 38px;
         height: 38px;
     }
-
     #rayo_footer img
     {
-        width: 9%;
+        width: 13%;
     }
     #rayo_footer
     {
@@ -585,16 +602,6 @@ nav
         width: 30%;
         margin-left: 15px;
     }
-
-    #titulos_main
-    {
-        font-size: 20px;
-    }
-    #lineas
-    {
-        height: 3px;
-    }
-
     .socialSvg 
     {
         width: 19px;
@@ -602,11 +609,11 @@ nav
     #container_redes
     {
         margin-right: 15px;
+        gap: 8px;
     }
     #container_redes h3
     {
         font-size: 0.9rem;
-        margin-bottom: 15px;
         margin-top: 5px;
     }
     #card 
@@ -618,10 +625,18 @@ nav
         width: 35px;
         height: 35px;
     }
-
     #rayo_footer
     {
         margin-right: 15px;
+    }
+
+    #container_info_footer
+    {
+        gap: 3px;
+    }
+    .info_footer
+    {
+        font-size: 9px;
     }
 }
 @media only screen and (max-width: 550px)
@@ -705,7 +720,6 @@ nav
     #container_redes h3
     {
         font-size: 0.8rem;
-        margin-bottom: 15px;
         margin-top: 5px;
     }
     #card 
@@ -717,14 +731,22 @@ nav
         width: 31px;
         height: 31px;
     }
-
     #rayo_footer img
     {
-        width: 14%;
+        width: 18%;
     }
     #rayo_footer
     {
         margin-right: 0px;
+    }
+
+    #container_info_footer
+    {
+        gap: 3px;
+    }
+    .info_footer
+    {
+        font-size: 7px;
     }
 }
 
@@ -750,7 +772,6 @@ nav
     #container_redes h3
     {
         font-size: 0.8rem;
-        margin-bottom: 15px;
         margin-top: 5px;
     }
     #card 
@@ -762,9 +783,8 @@ nav
         width: 31px;
         height: 31px;
     }
-
     #rayo_footer img
     {
-        width: 18%;
+        width: 20%;
     }
 }
