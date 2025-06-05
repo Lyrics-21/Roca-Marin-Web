@@ -100,7 +100,7 @@ nav
     width: 60%;
     margin: auto;
     margin-top: 80px;
-    margin-bottom: 180px;
+    margin-bottom: 190px;
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.70);
@@ -415,6 +415,12 @@ nav
     }
 
 
+    #container_form
+    {
+        width: 80%;
+    }
+
+
     .socialSvg 
     {
         width: 30px;
@@ -450,9 +456,6 @@ nav
         margin-left: 40px;
     }
 
-
-
-    
 
     .socialSvg 
     {
@@ -492,6 +495,46 @@ nav
     {
         display: none;
     }
+
+    #titulos_main
+    {
+        font-size: 26px;
+    }
+    #lineas
+    {
+        width: 85%;
+        height: 3px;
+        border-radius: 20px;
+    }
+
+    #container_form
+    {
+        width: 70%;
+        margin-bottom: 280px;
+        padding: 20px 20px 0px 20px;
+        margin-top: 50px;
+    }
+    #container_form label, 
+    #container_form button 
+    {
+    font-size: 0.8rem;
+    }
+    #container_form input,
+    #container_form textarea
+    {
+    font-size: 0.7rem;
+    }
+    .btn-wide 
+    {
+        width: 70%;
+    }
+    #imagen
+    {
+        width: 200px;
+        height: auto;
+    }
+
+
 
     #container_footer
     {
@@ -575,7 +618,24 @@ nav
         width: 19%;
     }
 }
-
+@media only screen and (max-width: 550px)
+{
+    #container_titulo
+    {
+        width: 70%;
+        padding-left: 30px;
+    }
+    #titulos_main
+    {
+        font-size: 15px;
+        letter-spacing: 4px;
+    }
+    #lineas
+    {
+        width: 85%;
+        height: 2px;
+    }
+}
 @media only screen and (max-width: 500px)
 {
     #marca img
@@ -583,6 +643,41 @@ nav
         width: 200px;
         height: 30px;
     }
+
+
+    #container_titulo
+    {
+        margin-top: 80px;
+        width: 75%;
+    }
+
+
+    #container_form
+    {
+        width: 90%;
+        margin-bottom: 150px;
+        margin-top: 30px;
+    }
+    #container_form label, 
+    #container_form button 
+    {
+    font-size: 0.8rem;
+    }
+    #container_form input,
+    #container_form textarea
+    {
+    font-size: 0.7rem;
+    }
+    .btn-wide 
+    {
+        width: 50%;
+    }
+    #imagen
+    {
+        width: 180px;
+        height: auto;
+    }
+
 
     #container_footer
     {

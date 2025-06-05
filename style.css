@@ -1308,6 +1308,7 @@ nav
     {
         width: 20px;
     }
+    
     .container_titulo
     {
         margin-top: 70px;
@@ -1317,11 +1318,11 @@ nav
     {
         font-size: 20px;
     }
-
     .lineas
     {
         height: 3px;
     }
+
     #contenido_qs
     {
         padding: 30px;
