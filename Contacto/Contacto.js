@@ -33,7 +33,7 @@ document.getElementById('form')
     {
       Swal.fire(
       {
-        icon: 'warning',
+        icon: "error",
         title: 'Nombre inválido',
         text: 'El nombre debe tener al menos 3 caracteres.'
       });
@@ -44,7 +44,7 @@ document.getElementById('form')
     {
       Swal.fire(
       {
-        icon: 'warning',
+        icon: "error",
         title: 'Teléfono inválido',
         text: 'El teléfono debe tener al menos 9 dígitos.'
       });
@@ -55,7 +55,7 @@ document.getElementById('form')
     {
      Swal.fire(
       {
-        icon: 'warning',
+        icon: "error",
         title: 'Email inválido',
         text: 'El email debe contener "@" y ".com".'
       });
@@ -66,7 +66,7 @@ document.getElementById('form')
     {
      Swal.fire(
       {
-        icon: 'warning',
+        icon: "error",
         title: 'Mensaje muy corto',
         text: 'El mensaje debe tener al menos 10 caracteres.'
       });
@@ -79,15 +79,19 @@ document.getElementById('form')
    const templateID = 'template_5d76rhq';
 
    emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
+    .then(() => 
+      {
       btn.value = 'Send Email';
-      Swal.fire({
+      Swal.fire(
+      {
         title: "Email enviado con éxito!",
         icon: "success"
       });
-    }, (err) => {
+    }, (err) => 
+      {
       btn.value = 'Send Email';
-      Swal.fire({
+      Swal.fire(
+      {
         icon: 'error',
         title: 'Error al enviar',
         text: JSON.stringify(err)

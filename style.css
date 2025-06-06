@@ -376,7 +376,7 @@ nav
     align-items: center;
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 28px;
     background-color: rgba(0, 0, 0, 0.5);
 
     transform: rotateY(0deg);
@@ -1646,7 +1646,7 @@ nav
     }
     .lamina_logo
     {
-        border-radius: 15px;
+        border-radius: 13px;
     }
     .cruz
     {
