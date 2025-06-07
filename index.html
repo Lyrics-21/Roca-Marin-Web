@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <title>Roca Marin</title>
+
+    <title>RocaMarin - Electricistas Matriculados</title>
 </head>
 <body>
     <header>
@@ -43,6 +44,11 @@
         </nav>  
 
         <section>
+            <div id="container_boton_wp">
+                <a href="https://wa.me/5492235294005" id="boton_wp">
+                    <img src="Recursos/whatsapp-brands.svg" alt="Whatsapp">
+                </a>
+            </div>
             <article id="encabezado">
                 <div id="logo">
                     <img src="Recursos/Logo RocaMarin.png" alt="logo">
@@ -207,12 +213,21 @@
                 <h3 class="titulos_main">NUESTROS CLIENTES</h3>
                 <div class="lineas"></div>
             </div>
-            <div id="container_clientes">
-                <img src="Recursos\CLIE_PROV\AD.png" alt="AD">
-                <img src="Recursos\CLIE_PROV\MK.png" alt="MK">
-                <img src="Recursos/CLIE_PROV/NIEVAS.png" alt="NIEVAS">
-                <img src="Recursos/CLIE_PROV/VERA.png" alt="VERA">
-                <img src="Recursos/CLIE_PROV/TOMBAL.png" alt="TOMBAL">
+            <div class="carousel-container">
+                <div id="flechas_carrusel_clientes">
+                    <img src="Recursos/Iconos/Arrow_left.svg" alt="flecha_izquierda" id="prev_c">
+                    <img src="Recursos/Iconos/Arrow_right.svg" alt="flecha_derecha" id="next_c">
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel" id="carousel">
+                    <img src="Recursos/CLIE_PROV/AD.png" alt="AD">
+                    <img src="Recursos/CLIE_PROV/MK.png" alt="MK">
+                    <img src="Recursos/CLIE_PROV/NIEVAS.png" alt="NIEVAS">
+                    <img src="Recursos/CLIE_PROV/VERA.png" alt="VERA">
+                    <img src="Recursos/CLIE_PROV/TOMBAL.png" alt="TOMBAL">
+                    </div>
+                </div>
             </div>
         </article>
     </main>

@@ -167,3 +167,28 @@ function cambiarZindex(imagen)
         }
     });
 };
+
+
+//CLIENTES
+const carousel = document.getElementById("carousel");
+const prev = document.getElementById("prev_c");
+const next = document.getElementById("next_c");
+
+let position = 0;
+const scrollPerClick = 230;
+const maxScroll = carousel.scrollWidth - carousel.parentElement.offsetWidth;
+
+next.addEventListener("click", () =>
+{
+    position -= scrollPerClick;
+    const maxTranslate = -(carousel.scrollWidth - carousel.parentElement.offsetWidth);
+    if (position < maxTranslate) position = maxTranslate;
+    carousel.style.transform = `translateX(${position}px)`;
+});
+
+prev.addEventListener("click", () =>
+{
+    position += scrollPerClick;
+    if (position > 0) position = 0;
+    carousel.style.transform = `translateX(${position}px)`;
+});

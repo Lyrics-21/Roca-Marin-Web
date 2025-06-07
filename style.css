@@ -63,6 +63,31 @@ nav
     display: flex;
     align-items: center;
 }
+
+#container_boton_wp
+{
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    z-index: 1000;
+}
+#boton_wp
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#boton_wp img 
+{
+    width: 80px;
+    height: auto;
+}
+
 #encabezado
 {
     display: flex;
@@ -549,24 +574,60 @@ nav
 
 
 /*ZONA CLIENTES*/
-#container_clientes
-{
-    display: flex;
-    justify-content: space-evenly;
-    width: 70%;
-    height: auto;
-    margin: 100px auto 100px auto;
-    background-color: rgba(125, 125, 125, 0.7);
-    padding: 40px;
-    border-radius: 30px;
-    border: 2px solid #c63303;
-    gap: 30px;
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 100px auto;
+  overflow: hidden;
+  background-color: rgba(125, 125, 125, 0.7);
+  border-radius: 30px;
+  border: 2px solid #c63303;
+  padding: 40px 80px;
 }
-#container_clientes img
+
+.carousel-wrapper
 {
-    border-radius: 30px;
-    width: 15%;
-    height: auto;
+  position: relative;    /* 🔑 para que las flechas se posicionen dentro de aquí */
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel
+{
+  display: flex;
+  transform: translateX(0px);
+  transition: transform 0.4s ease;
+  gap: 30px;
+}
+
+.carousel img
+{
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+#flechas_carrusel_clientes
+{
+  position: absolute;   
+  top: 50%;              
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+#flechas_carrusel_clientes img
+{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 /* ZONA FOOTER */
@@ -1377,6 +1438,21 @@ nav
 
 @media only screen and (max-width: 700px)
 {
+    #container_boton_wp
+    {
+        top: 15%;
+        left: 82%;
+    }
+    #boton_wp
+    {
+        width: 90px;
+        height: 90px;
+    }
+    #boton_wp img 
+    {
+        width: 55px;
+    }
+
     #encabezado
     {
         width: 95%;
@@ -1476,6 +1552,24 @@ nav
     }
 
 
+    .carousel img
+    {
+        width: 120px;
+    }
+    .carousel-container
+    {
+        margin: 40px auto;
+        padding: 20px 40px;
+        width: 60%;
+    }
+    #flechas_carrusel_clientes img
+    {
+        width: 25px;
+        height: 25px;
+    }
+
+
+
     #marca_footer
     {
         width: 30%;
@@ -1521,6 +1615,21 @@ nav
 
 @media only screen and (max-width: 500px)
 {
+    #container_boton_wp
+    {
+        top: 10%;
+        left: 82%;
+    }
+    #boton_wp
+    {
+        width: 60px;
+        height: 60px;
+    }
+    #boton_wp img 
+    {
+        width: 40px;
+    }
+
     #marca img
     {
         width: 200px;
@@ -1655,15 +1764,20 @@ nav
 
 
 
-    #container_clientes
+    .carousel img
     {
-        margin: 20px auto 20px auto;
-        gap: 20px;
+        width: 100px;
     }
-    #container_clientes img
+    .carousel-container
     {
-        width: 15%;
-        height: auto;
+        margin: 40px auto;
+        padding: 20px 40px;
+        width: 60%;
+    }
+    #flechas_carrusel_clientes img
+    {
+        width: 25px;
+        height: 25px;
     }
 
 
@@ -1715,6 +1829,12 @@ nav
 
 @media only screen and (max-width: 390px)
 {
+    #container_boton_wp
+    {
+        top: 12%;
+        left: 78%;
+    }
+
     #encabezado
     {
         width: 100%;
